@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_activity_nav"
+    app:startDestination="@id/anasayfaFragment">
+
+    <fragment
+        android:id="@+id/anasayfaFragment"
+        android:name="com.example.marketapp.ui.fragment.AnasayfaFragment"
+        android:label="fragment_anasayfa"
+        tools:layout="@layout/fragment_anasayfa" >
+        <action
+            android:id="@+id/favorilerGecis"
+            app:destination="@id/favorilerFragment" />
+        <action
+            android:id="@+id/kategoriGecis"
+            app:destination="@id/kategoriFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detayFragment"
+        android:name="com.example.marketapp.ui.fragment.DetayFragment"
+        android:label="fragment_detay"
+        tools:layout="@layout/fragment_detay" >
+        <argument
+            android:name="urun"
+            app:argType="com.example.marketapp.data.entity.Urunler" />
+        <action
+            android:id="@+id/detayGecis2"
+            app:destination="@id/profileFragment2" />
+        <action
+            android:id="@+id/detaydanGecis"
+            app:destination="@id/sepetFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sepetFragment"
+        android:name="com.example.marketapp.ui.fragment.SepetFragment"
+        android:label="fragment_sepet"
+        tools:layout="@layout/fragment_sepet" >
+        <argument
+            android:name="urun"
+            app:argType="com.example.marketapp.data.entity.Urunler" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment2"
+        android:name="com.example.marketapp.ui.fragment.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/favorilerFragment"
+        android:name="com.example.marketapp.ui.fragment.FavorilerFragment"
+        android:label="fragment_favoriler"
+        tools:layout="@layout/fragment_favoriler" >
+        <action
+            android:id="@+id/favoriDetayGecis"
+            app:destination="@id/detayFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/kategoriFragment"
+        android:name="com.example.marketapp.ui.fragment.KategoriFragment"
+        android:label="fragment_kategori"
+        tools:layout="@layout/fragment_kategori" />
+</navigation>
