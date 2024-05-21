@@ -8,7 +8,9 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.navArgs
 import com.example.marketapp.R
 import com.example.marketapp.databinding.FragmentDetayBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class DetayFragment : Fragment() {
     private lateinit var binding: FragmentDetayBinding
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -18,16 +20,15 @@ class DetayFragment : Fragment() {
         val bundle:DetayFragmentArgs by navArgs()
         val urun = bundle.urun
 
-        binding.toolbarDetay.title = urun.ad
+        binding.toolbarDetay.title = urun.adi
 
         binding.ivUrun.setImageResource(
             resources.getIdentifier(urun.resim,"drawable",requireContext().packageName))
 
-        binding.tvUrunAd.text = "${urun.ad}"
+        binding.tvUrunAd.text = "${urun.adi}"
 
-        binding.tvFiyat.text = "₺ ${urun.fiyat}"
+        binding.tvFiyat.text = "₺ ${urun.fiyati}"
 
-        binding.tvOlcu.text = "${urun.olcu} gram"
 
         return binding.root
     }

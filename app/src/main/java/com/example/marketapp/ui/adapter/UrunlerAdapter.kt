@@ -29,9 +29,9 @@ class UrunlerAdapter(var mContext: Context, var urunlerListesi:List<Urunler>)
 
         t.imageViewUrun.setImageResource(mContext.resources.getIdentifier(urun.resim,"drawable",mContext.packageName))
 
-        t.textViewAd.text = "${urun.ad}"
+        t.textViewAd.text = "${urun.adi}"
 
-        t.textViewFiyat.text = " ₺ ${urun.fiyat}"
+        t.textViewFiyat.text = " ₺ ${urun.fiyati}"
 
 
         t.cardViewUrun.setOnClickListener {
@@ -40,7 +40,7 @@ class UrunlerAdapter(var mContext: Context, var urunlerListesi:List<Urunler>)
         }
 
         t.buttonSepet.setOnClickListener {
-            Snackbar.make(it, "${urun.ad} sepete eklendi", Snackbar.LENGTH_SHORT).show()
+            Snackbar.make(it, "${urun.adi} sepete eklendi", Snackbar.LENGTH_SHORT).show()
         }
     }
 

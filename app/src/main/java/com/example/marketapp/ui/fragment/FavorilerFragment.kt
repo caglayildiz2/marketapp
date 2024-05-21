@@ -21,18 +21,10 @@ class FavorilerFragment : Fragment() {
         binding.urunRv.layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
 
         val urunlerListesi = ArrayList<Urunler>()
-        val u1 = Urunler(1,"Ürün Detayı","Domates","domates",32,600)
-        val u2 = Urunler(2,"Ürün Detayı","Ekmek","ekmek",10,50)
-        val u3 = Urunler(3,"Ürün Detayı","Elma","kirmizielma",25,1000)
-        val u4 = Urunler(4,"Ürün Detayı","Üzüm","uzum",32,600)
-        val u5 = Urunler(5,"Ürün Detayı","Salatalık","salatalik",40,500)
-        val u6 = Urunler(6,"Ürün Detayı","Cips","rufflescips",40,107)
+        val u1 = Urunler(1,"Salatalık","","Meyve&Sebze",40.0,0.0,"Çengelköy Salatalık","salatalik",null)
+        val u7 = Urunler(1,"Elma","","Meyve&Sebze",20.0,0.0,"Kırmızı Elma","elma",null)
         urunlerListesi.add(u1)
-        urunlerListesi.add(u2)
-        urunlerListesi.add(u3)
-        urunlerListesi.add(u4)
-        urunlerListesi.add(u5)
-        urunlerListesi.add(u6)
+        urunlerListesi.add(u7)
 
         val urunlerAdapter = UrunlerAdapter(requireContext(),urunlerListesi)
         binding.urunRv.adapter = urunlerAdapter

@@ -6,8 +6,10 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.marketapp.data.entity.Kategori
 import com.example.marketapp.databinding.CardTasarimKategoriBinding
+import com.example.marketapp.ui.viewmodel.UrunViewModel
 
 class KategoriAdapter(var mContext: Context, var kategoriListesi: ArrayList<Kategori>)
+//class KategoriAdapter(var mContext: Context, var kategoriListesi: ArrayList<Kategori>,var viewModel: UrunViewModel)
 
     : RecyclerView.Adapter<KategoriAdapter.CardTasarimKategoriTutucu>(){
 

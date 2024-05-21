@@ -15,7 +15,9 @@ import com.example.marketapp.data.entity.Urunler
 import com.example.marketapp.databinding.FragmentAnasayfaBinding
 import com.example.marketapp.ui.adapter.KategoriAdapter
 import com.example.marketapp.ui.adapter.UrunlerAdapter
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class AnasayfaFragment : Fragment() {
     private lateinit var binding: FragmentAnasayfaBinding
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
